@@ -34,7 +34,7 @@
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
         };
-        
+
         tmux: tmux_prefix {
             compatible = "zmk,behavior-hold-tap";
             label = "TMUX_PREFIX";
@@ -45,7 +45,7 @@
             bindings = <&tmux_hold>, <&tmux_tap>;
         };
     };
-    
+
     macros {
         tmux_tap: tmux_tap {
             label = "TMUX_TAP";
@@ -53,18 +53,18 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp S>
                 , <&macro_release &kp LCTRL>
                 ;
         };
-        
+
         tmux_hold: tmux_hold {
             label = "TMUX_HOLD";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings
                 = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp S>
                 , <&macro_release &kp LCTRL>
                 , <&macro_param_1to1>
                 , <&macro_tap &kp MACRO_PLACEHOLDER>
@@ -154,10 +154,10 @@
             &none      &none      &none      &none      &none          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│          │          │          │          │          │   │             │             │             │             │             │
-            &none      &none      &none      &none      &none          &none         &none         &none         &none         &none   
+            &none      &none      &none      &none      &none          &none         &none         &none         &none         &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│          │          │          │          │          │   │             │             │             │             │             │
-            &none      &none      &none      &none      &none          &bt BT_CLR    &none         &none         &none         &none   
+            &none      &none      &none      &none      &none          &bt BT_CLR    &none         &none         &none         &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                              &trans     &trans         &trans        &trans
         //                                 ╰──────────┴──────────╯   ╰─────────────┴─────────────╯
